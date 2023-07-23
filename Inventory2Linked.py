@@ -24,8 +24,10 @@ def main():
 def read_inventory_file(contents, database):
     # code goes here
     
+    
 def read_update_file(contents, database):
     # code goes here
+
 
 def open_file(filename):
     """
