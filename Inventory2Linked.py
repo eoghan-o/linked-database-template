@@ -13,13 +13,13 @@ def main():
     
     # This initializes the Linked List
     database = LinkedList()
-    
-    print("processing " + inventory_filename)
+      
+    print("processing: " + inventory_filename)
     # You may want to add more inputs to the function, in which casae
     # you should modify the following line.
     read_inventory_file(inventory_file_contents, database)
     
-    print("processing " + update_filename)
+    print("processing: " + update_filename)
     # You may want to add more inputs to the function, in which casae
     # you should modify the following line.
     read_update_file(update_file_contents, database)
@@ -32,9 +32,26 @@ def read_update_file(contents, database):
     # code goes here
 
 def open_file(filename):
+    """
+    Opens a file with an inputted filename and returns the contents
+    of the file in a string.
+
+    Parameters
+    ----------
+    filename : string
+        The name of the file that will be opened.
+
+    Returns
+    -------
+    List
+        A list filled with the IDs in the file in string format.
+        
+        If no valid filename was entered, the program will print
+        an error and exit.
+    """
     try:
         with open(filename) as f:
-            return f.read()
+            return f.read().split()
     except FileNotFoundError:
         print("Error in opening " + filename)
         sys.exit()
