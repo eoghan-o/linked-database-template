@@ -15,13 +15,9 @@ def main():
     database = LinkedList()
       
     print("processing: " + inventory_filename)
-    # You may want to add more inputs to the function, in which casae
-    # you should modify the following line.
     read_inventory_file(inventory_file_contents, database)
     
     print("processing: " + update_filename)
-    # You may want to add more inputs to the function, in which casae
-    # you should modify the following line.
     read_update_file(update_file_contents, database)
     
     
